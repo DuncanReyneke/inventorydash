@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dashboard">
+        <h1>Inventory Dashboard</h1>
+        <form id="itemForm">
+            <input type="text" id="itemName" placeholder="Item Name" required>
+            <input type="number" id="itemQuantity" placeholder="Quantity" required>
+            <input type="number" id="itemPrice" placeholder="Price" required>
+            <input type="text" id="itemCategory" placeholder="Category" required>
+            <button type="submit">Add Item</button>
+        </form>
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="summary">
+            <p>Total Items: <span id="totalItems"></span></p>
+            <p>Total Value: <span id="totalValue"></span></p>
+            <p>Items Low in Stock: <span id="lowStockItems"></span></p>
+        </div>
+        <div>
+            <label for="filterName">Filter by name:</label>
+            <input type="text" id="filterName" placeholder="Enter name">
+        </div>
+        <div>
+            <label for="filterCategory">Filter by category:</label>
+            <input type="text" id="filterCategory" placeholder="Enter category">
+        </div>
+        <div>
+            <label for="filterPrice">Filter by price:</label>
+            <select id="filterPrice">
+                <option value="">All</option>
+                <option value="100">Above $100</option>
+            </select>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
